@@ -5,10 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello</title>
   <style>
+    @font-face {
+      font-family: 'Open Sauce Sans';
+      src: url('./OpenSauceSansVF.ttf');
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
+      display: grid;
+      height: 100dvh;
+      overflow: hidden;
+      padding: 3rem;
+      perspective: 500px;
+      perspective-origin: center center;
+      place-items: center;
     }
 
     canvas {
@@ -18,22 +33,20 @@
     }
 
     .overlay {
-      background: url('hello.png') no-repeat 50% 50%;
-      background-size: 28%;
-      height: 100dvh;
-      opacity: 0.5;
+      color: #f3c;
+      font-family: 'Open Sauce Sans';
+      font-size: clamp(4rem, 2dvw, 8rem);
+      font-weight: 400;
       position: absolute;
-      width: 100dvw;
+      text-transform: uppercase;
+      transform: translateZ(0);
+      will-change: transform;
       z-index: 1;
-    }
-
-    .hidden {
-      opacity: 0;
     }
   </style>
 </head>
 <body>
   <script type="module" src="main.js"></script>
-  <div class="overlay" onclick="document.querySelector('.overlay').classList.toggle('hidden')"></div>
+  <div class="overlay">hello</div>
 </body>
 </html>
