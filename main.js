@@ -39,8 +39,8 @@ const leftSide = [
   -2.1, height, 0,          -2.1, -height, 0,
 ];
 
-const rightSide = leftSide.map((val, index) => {
-  if (index % 3 === 0) {
+const rightSide = leftSide.map((val, i) => {
+  if (i % 3 === 0) {
     return val === 0 ? 0 : -val;
   }
   return val;
