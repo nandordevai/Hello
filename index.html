@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    canvas {
+      background: white;
+      position: absolute;
+      z-index: 0;
+    }
+
+    .overlay {
+      background: url('hello.png') no-repeat 50% 50%;
+      background-size: 28%;
+      height: 100dvh;
+      opacity: 0.5;
+      position: absolute;
+      width: 100dvw;
+      z-index: 1;
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <script type="module" src="main.js"></script>
+  <div class="overlay" onclick="document.querySelector('.overlay').classList.toggle('hidden')"></div>
+</body>
+</html>
