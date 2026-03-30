@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello</title>
+  <style>
+    @font-face {
+      font-family: 'Open Sauce Sans';
+      src: url('/assets/OpenSauceSansVF-Cq-dwpDV.ttf');
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: grid;
+      height: 100dvh;
+      overflow: hidden;
+      padding: 3rem;
+      perspective: 500px;
+      perspective-origin: center center;
+      place-items: center;
+    }
+
+    canvas {
+      background: white;
+      position: absolute;
+      z-index: 0;
+    }
+
+    .overlay {
+      color: #f3c;
+      font-family: 'Open Sauce Sans';
+      font-size: clamp(4rem, 2dvw, 8rem);
+      font-weight: 400;
+      position: absolute;
+      text-transform: uppercase;
+      transform: translateZ(0);
+      will-change: transform;
+      z-index: 1;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-BaIVLU6M.js"></script>
+</head>
+<body>
+  <div class="overlay">hello</div>
+</body>
+</html>
